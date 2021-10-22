@@ -1,4 +1,4 @@
-# 01.22.2021 - Modified
+# 01.22.2021
 
 from pathlib import Path
 
@@ -21,12 +21,7 @@ def get():
         - p.stem = filename excluding extension
         - p.suffix = file extension
     """
-    print(" Please drag the original TS Invoice into this window"
-          " and press ENTER.\n The new file will be saved to the same"
-          " folder as your original.\n Make sure you use the right file."
-          "\n\n *If you replace Asset_List.xlsx, open it and "
-          " File>Save as... .xlsx first.")
-          
+
     # Get input file/folder and strip characters
     f = input('\n Drop File: ')
     f = f.strip(" &'\"")
@@ -34,4 +29,3 @@ def get():
     # set Path object and return
     p = Path(f).resolve()
     return p
-    
