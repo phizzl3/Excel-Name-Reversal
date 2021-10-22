@@ -1,3 +1,9 @@
+"""
+Get Xlsx object (Excel spreadsheet) containing string values
+(formatted "Last, First") in a specified column, loop through
+and replace those values with reformatted (First Last) text.
+"""
+
 from xlclass import Xlsx
 
 
