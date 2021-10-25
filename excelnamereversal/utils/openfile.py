@@ -21,6 +21,6 @@ def open(f_path: str) -> None:
     else:
         import subprocess
         if operating_system == "Darwin":
-            subprocess.run(f"open {f_path}", shell=True)
+            subprocess.run(f'open "{f_path}"', shell=True)
         elif operating_system == "Linux":
-            subprocess.run(f"xdg-open {f_path}", shell=True)
+            subprocess.run(f'xdg-open "{f_path}"', shell=True)
