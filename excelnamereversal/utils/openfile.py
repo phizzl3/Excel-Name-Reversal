@@ -1,12 +1,12 @@
 """
-Open an output file based on Operating System.
+Open an output file based on detected Operating System.
 Supports Windows, Mac, & Linux.
 """
 
 import platform
 
 
-def open(f_path: str) -> None:
+def openfile(f_path: str) -> None:
     """Open an output file based on Operating System.
     Supports Windows, Mac, & Linux.
 

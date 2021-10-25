@@ -6,7 +6,8 @@ and output a new Excel file with a list of names written
 """
 
 from settings import *
-from utils import dropfile, openfile
+from utils import dropfile
+from utils.openfile import openfile
 from xlclass import Xlsx
 
 # Get file and generate Xlsx object
@@ -23,4 +24,4 @@ out_path = f"{f_path.parent}/{f_path.stem}-{OUTPUT_SUFFIX}{f_path.suffix}"
 # Save and (optionally) open new file
 xl_obj.save(out_path)
 if OPEN_OUTPUT_FILE:
-    openfile.open(out_path)
+    openfile(out_path)
