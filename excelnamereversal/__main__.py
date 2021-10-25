@@ -5,22 +5,16 @@ and output a new Excel file with a list of names written
 "First Last" ...because, why not?
 """
 
-import name_swap
+from settings import *
 from utils import dropfile, openfile
 from xlclass import Xlsx
-
-OUTPUT_SUFFIX = "swapped"
-DATA_COLUMN = "A"
-START_ROW = 2
-OPEN_OUTPUT_FILE = True
-
 
 # Get file and generate Xlsx object
 f = dropfile.get()
 xl_obj = Xlsx(f)
 
 # Swap the info within the Xlsx object
-name_swap.swap(xl_obj, DATA_COLUMN, START_ROW)
+xl_obj.reverse_text(datacol=DATA_COLUMN, startrow=START_ROW)
 
 # Generate output filepath
 f_path = xl_obj.path
